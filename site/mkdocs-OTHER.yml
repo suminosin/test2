@@ -1,0 +1,19 @@
+site_name: その他のテーマ
+site_url: https://localhost:8000/OTHER/
+docs_dir: 'OTHER'  # 基点になるディレクトリ 必ずindex.mdを置くこと
+
+
+
+plugins:
+  - search:
+      separator: '[\s\-\.]+'    # 検索インデックスの区切り文字
+  - exclude:  # サブディレクトリを除外しないと面倒なことになりそう
+      glob:
+        - '**/.git/*'
+        - '**/.vscode/*'    # vscodeのC#プロジェクト
+        - '**/bin/*'    # vscodeのC#プロジェクト
+        - '**/obj/*'    # vscodeのC#プロジェクト
+        - '**/download/*'   # ダウンロードしたツール
+        - '**/downloads/*'   # ダウンロードしたツール
+        - '**/example/*'    # サンプルプログラムの基点のディレクトリ
+      regex: '.*.(tmp|bin|tar|gz|zip)$'
